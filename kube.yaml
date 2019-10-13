@@ -27,6 +27,8 @@ spec:
       labels:
         app: maven
     spec:
+      imagePullSecrets:
+        - name: registry-key
       containers:
         - name: maven
           image: 121.40.49.87:5001/docker-demo:latest
