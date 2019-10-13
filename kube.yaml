@@ -13,10 +13,13 @@ spec:
   selector:
     app: maven
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: maven-deployment
+selector:
+  matchLabels:
+    app: maven
 spec:
   replicas: 1
   template:
