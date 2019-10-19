@@ -1,0 +1,15 @@
+stages:
+- name: build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: 121.40.49.87:5000/docker-demo
+      pushRemote: true
+      registry: 121.40.49.87:5000
+- name: deploy
+  steps:
+  - applyYamlConfig:
+      path: ./kube.yaml
+timeout: 60
+notification: {}
