@@ -35,5 +35,5 @@ spec:
           ports:
           - containerPort: 8888
           env:
-            - name: key
-              value: "value"
+            - name: RUN_ARGS
+              value: "--spring.profiles.active=qa"
