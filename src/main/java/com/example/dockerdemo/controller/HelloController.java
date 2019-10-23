@@ -14,6 +14,6 @@ public class HelloController {
     @GetMapping
     public String sayHello() {
         log.info("Calling hello controller! at {}, on {}", System.currentTimeMillis(), env);
-        return "hello docker demo at " + env;
+        return "hello docker demo at: " + env;
     }
 }
