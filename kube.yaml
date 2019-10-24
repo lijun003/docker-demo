@@ -37,3 +37,19 @@ spec:
           env:
             - name: RUN_ARGS
               value: "--spring.profiles.active=qa"
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: myapp-traefik-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+    - host: traefik.ui
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: maven-service
+              servicePort: 8889
