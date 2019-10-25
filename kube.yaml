@@ -46,7 +46,7 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-    - host: traefik.ui
+    - host: api.dreambuilder.store
       http:
         paths:
           - path: /
