@@ -31,7 +31,7 @@ spec:
         - name: registry-key
       containers:
         - name: maven
-          image: 121.40.49.87:5000/docker-demo:latest
+          image: 118.31.22.147:5000/docker-demo:latest
           ports:
           - containerPort: 8888
           env:
