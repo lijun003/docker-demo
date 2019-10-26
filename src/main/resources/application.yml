@@ -1,0 +1,11 @@
+logging.config: classpath:logback-spring.xml
+env: default
+
+server:
+  port: 8888
+
+spring:
+  application:
+    name: docker-demo
+  profiles:
+    active: local

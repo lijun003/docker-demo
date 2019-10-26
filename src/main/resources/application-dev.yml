@@ -1,0 +1,8 @@
+logging.config: classpath:logback-spring.xml
+env: dev
+spring:
+  datasource:
+    url: jdbc:mysql://118.31.22.147:32006/demo?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
