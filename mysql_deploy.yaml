@@ -12,7 +12,7 @@ spec:
   ports:
   - name: maven
     port: 3306
-    nodePort: 33006
+    nodePort: 32006
     targetPort: 3306
     protocol: TCP
   selector:
