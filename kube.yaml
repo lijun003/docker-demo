@@ -32,6 +32,7 @@ spec:
       containers:
         - name: maven
           image: 118.31.22.147:5000/docker-demo:latest
+          imagePullPolicy: Always
           ports:
           - containerPort: 8888
           env:
