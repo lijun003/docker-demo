@@ -33,6 +33,18 @@ spec:
         - name: maven
           image: 118.31.22.147:5000/docker-demo:latest
           imagePullPolicy: Always
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8888
+            initialDelaySeconds: 30
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8888
+            initialDelaySeconds: 30
+            periodSeconds: 5
           ports:
           - containerPort: 8888
           env:
