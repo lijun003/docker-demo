@@ -31,7 +31,7 @@ spec:
         - name: registry-key
       containers:
         - name: maven
-          image: 118.31.22.147:5000/docker-demo:latest
+          image: 172.16.97.141:5000/docker-demo:latest
           imagePullPolicy: Always
           livenessProbe:
             httpGet:
